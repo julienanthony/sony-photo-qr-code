@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prendre une photo Sony A7III</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Appuyez pour prendre une photo</h1>
+  <button id="takePhotoBtn">Prendre la photo</button>
+
+  <script>
+    // Ici, le bouton va envoyer un signal au Raspberry Pi pour déclencher le Sony
+    const button = document.getElementById('takePhotoBtn');
+    button.addEventListener('click', () => {
+      alert("Signal envoyé pour prendre la photo !");
+      // Plus tard : ici tu enverras la requête au Raspberry Pi
+    });
+  </script>
+
+</body>
+</html>
